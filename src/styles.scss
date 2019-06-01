@@ -1,6 +1,8 @@
 html * {
   outline: none;
   box-sizing: border-box;
+  text-decoration: none;
+  user-select: none;
 }
 
 body {
@@ -9,4 +11,14 @@ body {
   overflow-x: hidden;
   background-color: white;
   height: 100%;
+}
+
+@font-face {
+  font-family: 'FuturaPTBold';
+  src: url("/assets/static/font/futura/FuturaPTBold.otf");
+}
+
+@font-face {
+  font-family: 'FuturaPTBook';
+  src: url("/assets/static/font/futura/FuturaPTBook.otf");
 }

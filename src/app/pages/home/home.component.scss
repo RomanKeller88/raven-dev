@@ -1,72 +1,58 @@
-.header {
-  height: 60px;
-  width: 100vw;
-  background: white;
-  display: flex;
-  justify-content: center;
-  font-size: 13px;
+.home {
+  margin: 0 20px;
 
-  &-wrap {
-    width: calc(100vw - 40px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &-section_one {
+    height: calc(100vh - 60px);
+    width: 100%;
+    position: relative;
 
-    &-logo {
+    &-background {
+      width: 100%;
+      font-family: 'FuturaPTBold', sans-serif;
+      font-size: 10vw;
+      background: #213875;
+      color: white;
       display: flex;
       align-items: center;
-
-      &-icon {
-        height: 24px;
-        width: 24px;
-        margin-right: 10px;
-      }
+      justify-content: center;
+      bottom: 50%;
+      position: absolute;
     }
 
-    &-navigation {
+    &-content {
+      width: 100%;
+      position: absolute;
+      bottom: 30px;
       display: flex;
-      align-items: center;
+      justify-content: space-between;
+      margin: 0 20px;
 
-      &-link {
-        cursor: pointer;
+      &-left_block {
+        height: 100%;
+        width: 45%;
 
-        &:not(:last-child) {
-          margin-right: 20px;
+        &-title {
+          font-size: 28px;
+          font-family: 'FuturaPTBold', sans-serif;
+          margin-bottom: 10px;
         }
+
+        &-description {
+          margin-bottom: 20px;
+        }
+      }
+
+      &-right_block {
+        height: 100%;
+        width: 55%;
       }
     }
   }
 }
 
-.raven_logo {
-  background: url("/assets/static/logo/header/raven-logo.svg") center /cover no-repeat;
+.decoration {
+  color: #213875;
+  cursor: pointer;
+  text-decoration: underline;
 }
-
-
-.pointer {
-  position: relative;
-  z-index: 1;
-}
-
-.pointer::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: -0.25em;
-  right: -0.25em;
-  background-color: hsla(164, 97%, 55%, 0.75);
-  transform-origin: center right;
-  transform: scaleX(0);
-  transition: transform 0.2s ease-in-out;
-}
-
-.pointer:hover::before {
-  transform: scaleX(1);
-  transform-origin: center left;
-}
-
-
-
 
