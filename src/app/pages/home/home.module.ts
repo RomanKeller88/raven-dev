@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {HomeComponent} from './home.component';
 import {RouterModule} from '@angular/router';
 import {HeaderModule} from '../../components/header/header.module';
-import {MatTabsModule} from '@angular/material';
+import {MatButtonModule, MatTabsModule, MatTooltipModule} from '@angular/material';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -11,7 +11,9 @@ import {MatTabsModule} from '@angular/material';
     CommonModule,
     RouterModule,
     HeaderModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonModule,
+    MatTooltipModule
   ]
 })
 export class HomeModule {

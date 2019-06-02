@@ -3,6 +3,8 @@ html * {
   box-sizing: border-box;
   text-decoration: none;
   user-select: none;
+  font-family: 'Futura PT Book', sans-serif;
+  color: #2E2F30;
 }
 
 body {
@@ -11,14 +13,47 @@ body {
   overflow-x: hidden;
   background-color: white;
   height: 100%;
+  z-index: 0;
 }
+
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url("/assets/static/font/futura/FuturaPTBook.otf");
+}
+
 
 @font-face {
   font-family: 'FuturaPTBold';
   src: url("/assets/static/font/futura/FuturaPTBold.otf");
 }
 
+
 @font-face {
-  font-family: 'FuturaPTBook';
-  src: url("/assets/static/font/futura/FuturaPTBook.otf");
+  font-family: "Futura PT ExtraBold";
+  src: url("/assets/static/font/futura/FuturaPT-ExtraBold.ttf");
 }
+
+.pointer {
+  position: relative;
+  z-index: 1;
+}
+
+.pointer::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -0.25em;
+  right: -0.25em;
+  background-color: hsla(164, 38%, 68%, 0.75);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.pointer:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
